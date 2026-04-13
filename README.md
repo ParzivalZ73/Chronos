@@ -5,32 +5,29 @@ A local AI agent that accepts voice input, converts speech to text, detects user
 
 ## Project Structure
 Chronos/
-│── app.py # Streamlit UI
-│── agent.py # Intent routing & orchestration
-│── tools.py # Tool execution (files, code, etc.)
-│── stt.py # Speech-to-text logic
-│── output/ # Safe execution directory
-│── requirements.txt
-│── README.md
+- (all inside chronos folder)
+  - app.py # Streamlit UI
+  - agent.py # Intent routing & orchestration
+  - tools.py # Tool execution (files, code, etc.)
+  - stt.py # Speech-to-text logic
+  - output/ # Safe execution directory
+  - requirements.txt
+  - README.md
 
 # Chronos — Voice Controlled Local AI Agent
 A fully offline, voice-controlled AI agent that transcribes speech, detects intent, and executes local actions — built with Whisper, qwen2.5-coder, Ollama, and Streamlit.
 
-## Demo
+<img width="1919" height="919" alt="Screenshot 2026-04-13 224813" src="https://github.com/user-attachments/assets/87843333-75c8-4161-b8c4-94d33d7d5dc1" />
+<img width="1919" height="920" alt="Screenshot 2026-04-13 224823" src="https://github.com/user-attachments/assets/f176e861-75f7-45b1-b03f-7faac549f5a2" />
+<img width="1919" height="910" alt="Screenshot 2026-04-13 224838" src="https://github.com/user-attachments/assets/61dd3f25-edcf-48a6-91e0-63403a4c1352" />
+<img width="1919" height="916" alt="Screenshot 2026-04-13 224847" src="https://github.com/user-attachments/assets/f8dc0571-4556-4555-96ea-8072aa78ca52" />
 
+## Live Demo
+Due to local model dependencies (Ollama, Whisper), this project runs locally.
+Watch the demo here: https://youtu.be/UmMykbFlc6k
 
 ## Architecture
-Audio Input
-↓
-Speech-to-Text (Whisper)
-↓
-Intent Detection (qwen2.5-coder via Ollama)
-↓
-Command Routing (Agent Logic)
-↓
-Tool Execution (File / Code / System Actions)
-↓
-Output Display (Streamlit UI)
+Audio Input --> Speech-to-Text (Whisper) --> Intent Detection (qwen2.5-coder via Ollama) --> Command Routing (Agent Logic)--> Tool Execution (File / Code / System Actions) --> Output Display (Streamlit UI)
 
 ## Features
 - Voice or file audio input
@@ -158,7 +155,7 @@ All operations are modular and extendable.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component        | Technology Used              |
 |------------------|------------------------------|
@@ -169,7 +166,7 @@ All operations are modular and extendable.
 
 ---
 
-## 💻 Hardware Configuration
+## Hardware Configuration
 
 - GPU: NVIDIA RTX 4050 (6GB VRAM)
 - CPU: Intel i7-12650HX
@@ -179,7 +176,7 @@ This setup enables efficient local inference for both Whisper and LLM models.
 
 ---
 
-## 🧩 Design Decisions
+## Design Decisions
 
 ### 1. Local-First Approach
 - Eliminates dependency on cloud APIs
@@ -252,6 +249,7 @@ streamlit run app.py
 Chronos demonstrates how modern local AI models can be combined into a cohesive system capable of understanding and executing real-world tasks. This project highlights the potential of offline AI agents as powerful, privacy-preserving alternatives to cloud-based assistants.
 
 ## Article
+https://dev.to/parzivalz73/i-built-a-fully-offline-voice-controlled-ai-agent-using-whisper-and-qwen25-5ehk
 
 
 
